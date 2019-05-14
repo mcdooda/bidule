@@ -112,7 +112,7 @@ bundle_identifier = example.unnamed
 [html5]
 custom_heap_size = 0
 include_dev_tool = 0
-htmlfile = /builtins/manifests/web/engine_template.html
+htmlfile = /html/engine_template.html
 archive_location_prefix = archive
 cssfile = /html/style.css
 

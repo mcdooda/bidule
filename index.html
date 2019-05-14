@@ -8,6 +8,11 @@
 
 	<title>Le Jeu De Bidule 1.0</title>
 	<style>
+	html {
+		margin: 0;
+		padding: 0;
+	}
+
 	/* Disable user selection to avoid strange bug in Chrome on Windows:
 	* Selecting a text outside the canvas, then clicking+draging would
 	* drag the selected text but block mouse down/up events to the engine.
@@ -19,6 +24,9 @@
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+		margin: 0;
+		padding: 0;
+		background-color: #ccbfb5;
 	}
 
 	/* DEF-3413
@@ -37,9 +45,11 @@
 	}
 
 	.canvas-app-container {
-		background: rgb(255,255,255) no-repeat center url("try_game.png");
-		/* A positioned parent for loading visuals */
-		position: relative;
+		width: 430px;
+		max-height: 100vh;
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 0;
 	}
 
 	.canvas-app-container:-webkit-full-screen {
@@ -49,22 +59,22 @@
 	}
 
 	.canvas-app-canvas {
-		max-height: 100vh;
-		max-width: 100%;
+		height: 100%;
+		width: 100%;
 	}
 
 	.canvas-app-progress {
 		position: absolute;
 		background-color: rgb(245, 245, 245);
-		height: 20px;
+		height: 5px;
 		/* Progress same width as canvas. */
 		width: 430px;
 		bottom: 0px;
 	}
 
 	.canvas-app-progress-bar {
-		font-size: 12px;
-		height: 20px;
+		font-size: 5px;
+		height: 5px;
 		color: rgb(255, 255, 255);
 		background-color: rgb(30, 100, 234);
 		text-align: center;
@@ -89,7 +99,7 @@
 		<canvas id="canvas" class="canvas-app-canvas" tabindex="1" width="430" height="640"></canvas>
 	</div>
 
-	<button id="fullscreen" class="button">Fullscreen</button>
+	<!--<button id="fullscreen" class="button">Fullscreen</button>-->
 
 	<!-- -->
 	
@@ -133,9 +143,11 @@
 	}
 
 	/* Fullscreen button */
+	/*
 	document.getElementById("fullscreen").onclick = function (e) {
 		Module.toggleFullscreen();
 	};
+	*/
 
 	if (false) {
 		// Load Facebook API
