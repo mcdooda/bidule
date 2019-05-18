@@ -132,6 +132,7 @@ http_timeout = 0
 shared_state = 1
 
 [tracking]
+app_id = 292518F463606020
 
 [label]
 max_count = 64
